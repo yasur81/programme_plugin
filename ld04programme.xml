@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" method="upgrade">
+	<name>Lancaster Programme display</name>
+	<author>David Johnson</author>
+	<creationDate>May 2024</creationDate>
+	<copyright>(C) 2024 Ramblers Association</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>ramblers@yasur.uk</authorEmail>
+	<authorUrl>ramblers.org.uk</authorUrl>
+	<version>0.0.4</version>
+	<description>Plugin to display Lancaster Group programme</description>
+	<files>
+		<filename plugin="ld04programme">ld04programme.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="googlescripturi"
+					type="text"
+					label="Google web script uri"
+					size="150"
+					description="Google web script uri">
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
