@@ -11,6 +11,7 @@
 	<description>Plugin to display Lancaster Group programme</description>
 	<files>
 		<filename plugin="ld04programme">ld04programme.php</filename>
+		<folder>css</folder>
 	</files>
 	<config>
 		<fields name="params">
