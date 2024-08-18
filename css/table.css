@@ -1,7 +1,7 @@
+/* set styles for programme display */
 div.prog {
-    overflow-x:auto;
+    overflow-x:auto; /* enables horizontal scrolling for the table */
     }
     div.prog p, tr {
     font-size:20px;
     }
-    "; 
