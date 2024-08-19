@@ -67,12 +67,13 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 		{
 			$doc = Factory::getDocument();
 			$wa  = $doc->getWebAssetManager(); //new way to insert css (and scripts)
+			$pluginPath = 'plugins/content/' . $this->_name;
 			$user = Factory::getUser();
 			$input = Factory::getApplication()->getInput();
 
 			// overflow-x added to enable tables to be scrolled
 			//register style using asset management (Joomla 4+)
-			$wa->registerAndUseStyle('contentplugld04programme.tablestyle',$pluginPath.'/table.css');
+			$wa->registerAndUseStyle('contentplugld04programme.tablestyle',$pluginPath.'/css/table.css');
 			$gUri = $this->params->get("googlescripturi", 0); //note $this->params contains those set by administrator.
 			$jsonFile = 'images/walks/jsonwalks';
 			$webSource = false;
