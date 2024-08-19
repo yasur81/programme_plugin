@@ -72,7 +72,7 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 
 			// overflow-x added to enable tables to be scrolled
 			//register style using asset management (Joomla 4+)
-			$wa->registerAndUseStyle('contentplugld04programme.tablestyle',$pluginPath.'/css/table.css');
+			$wa->registerAndUseStyle('contentplugld04programme.tablestyle',$pluginPath.'/table.css');
 			$gUri = $this->params->get("googlescripturi", 0); //note $this->params contains those set by administrator.
 			$jsonFile = 'images/walks/jsonwalks';
 			$webSource = false;
