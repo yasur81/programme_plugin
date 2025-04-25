@@ -162,12 +162,6 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 		}
 
 	}
-	/**
-	 * display the month, then start a new table and header row
-	 *
-	 * @param string $currentMonth
-	 * @return string the generated html
-	 */
 	protected function tableStart($currentMonth) { // display the month, start a new table and header row
 		$headerList = ["Day", "Date", "Leader", "Time", "Description", "Grid Ref", "Length (miles)", "Grade", "Car Share Contribution", "Telephone"];
 		$html =  '<h2>' . $currentMonth . '</h2>';
@@ -178,16 +172,7 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 		$html = $html . '</tr>';
 		return $html;
 	}
-	/**
-	 * Replace the target with the new html
-	 *
-	 * @param mixed &$article the article object
-	 * @param string $html the replacement html
-	 * @param integer $position of the target within the text
-	 * @param string $target text
-	 * @return void
-	 */
-	protected function updateText($article, $html, $position, $target) {
+	protected function updateText($article, $html, $position, $target) { //replace the target with new html
 		$article->text = substr_replace($article->text, $html, $position, strlen($target));
 		return;
 	}
