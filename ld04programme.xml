@@ -23,6 +23,16 @@
 					size="150"
 					description="Google web script uri">
 				</field>
+				<field
+					name="usergroup"
+					type="UserGroupList"
+					label="User group for programme download"
+					description="User group authorised to update the programme"
+					layout="joomla.form.field.list-fancy-select"
+					checksuperusergroup="0"
+					default=""
+					multiple="0">
+				</field>
 			</fieldset>
 		</fields>
 	</config>

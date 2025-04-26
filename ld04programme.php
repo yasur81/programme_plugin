@@ -68,7 +68,7 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 			$doc = Factory::getDocument();
 			$wa  = $doc->getWebAssetManager(); //new way to insert css (and scripts)
 			$pluginPath = 'plugins/content/' . $this->_name; // base path of this plugin's files
-			$user = Factory::getUser();
+			$user = Factory::getApplication()->getIdentity();
 			$input = Factory::getApplication()->getInput();
 
 			// overflow-x added to enable tables to be scrolled
@@ -77,7 +77,8 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 			$gUri = $this->params->get("googlescripturi", 0); //note $this->params contains those set by administrator.
 			$jsonFile = 'images/walks/jsonwalks';
 			$webSource = false;
-			$authorised = ($user->guest != '1') ? true : false; // authorised if signed in - change condition as appropriate
+			$authGroup = (int) $this->params->get("usergroup"); //authorised group set by administrator. Cast to int for later
+			$authorised = in_array($authGroup, $user->groups, true); // authorised if user belongs to authorised group
 			
 			$html = '<div class="prog">'; //the first bit of replacement html
 			if ($authorised) {
