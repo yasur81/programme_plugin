@@ -65,6 +65,8 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 		}
 		else
 		{
+			error_reporting(E_ALL);
+			ini_set('display_errors', 1);
 			$doc = Factory::getDocument();
 			$wa  = $doc->getWebAssetManager(); //new way to insert css (and scripts)
 			$pluginPath = 'plugins/content/' . $this->_name; // base path of this plugin's files
@@ -75,7 +77,7 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 			//register style using asset management (Joomla 4+)
 			$wa->registerAndUseStyle('contentplugld04programme.tablestyle',$pluginPath.'/css/table.css');
 			$gUri = $this->params->get("googlescripturi", 0); //note $this->params contains those set by administrator.
-			$jsonFile = 'images/walks/jsonwalks';
+			$jsonFile = $this->params->get("jsonfile");
 			$webSource = false;
 			$authGroup = (int) $this->params->get("usergroup"); //authorised group set by administrator. Cast to int for later
 			$authorised = in_array($authGroup, $user->groups, true); // authorised if user belongs to authorised group

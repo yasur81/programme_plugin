@@ -33,6 +33,13 @@
 					default=""
 					multiple="0">
 				</field>
+				<field
+					name="jsonfile"
+					type="text"
+					label="Programme file"
+					description="JSON file where the programme is stored"
+					default="images/walks/walks.json">
+				</field>
 			</fieldset>
 		</fields>
 	</config>
