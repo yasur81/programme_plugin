@@ -79,9 +79,14 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 			$gUri = $this->params->get("googlescripturi", 0); //note $this->params contains those set by administrator.
 			$jsonFile = $this->params->get("jsonfile");
 			$webSource = false;
-			$authGroup = (int) $this->params->get("usergroup"); //authorised group set by administrator. Cast to int for later
-			$authorised = in_array($authGroup, $user->groups, true); // authorised if user belongs to authorised group
-			
+//			$authGroup = (int) $this->params->get("usergroup"); //authorised group set by administrator. Cast to int for later
+			$authGroups = $this->params->get("usergroup"); //authorised groups set by administrator.
+			foreach ($authGroups as $authGroup) {
+				$authorised = in_array( (int) $authGroup, $user->groups, true); // authorised if user belongs to authorised group
+				if ($authorised) {
+					break;
+				}
+			}
 			$html = '<div class="prog">'; //the first bit of replacement html
 			if ($authorised) {
 				$html = $html . '<form method="post">';
