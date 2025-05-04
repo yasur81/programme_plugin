@@ -21,7 +21,8 @@
 					type="text"
 					label="Google web script uri"
 					size="150"
-					description="Google web script uri">
+					description="Google web script uri"
+					required="true">
 				</field>
 				<field
 					name="usergroup"
@@ -38,7 +39,8 @@
 					type="text"
 					label="Programme file"
 					description="JSON file where the programme is stored"
-					default="images/walks/walks.json">
+					default="images/walks/walks.json"
+					required="true">
 				</field>
 			</fieldset>
 		</fields>
