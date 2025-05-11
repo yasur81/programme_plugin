@@ -7,11 +7,12 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>ramblers@yasur.uk</authorEmail>
 	<authorUrl>ramblers.org.uk</authorUrl>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<description>Plugin to display Lancaster Group programme</description>
 	<files>
 		<filename plugin="ld04programme">ld04programme.php</filename>
 		<folder>css</folder>
+		<folder>walkdata</folder>
 	</files>
 	<config>
 		<fields name="params">
@@ -34,15 +35,6 @@
 					checksuperusergroup="0"
 					default=""
 					multiple="1">
-				</field>
-				<field
-					name="jsonfile"
-					type="text"
-					label="Programme file"
-					description="JSON file where the programme is stored.
-						Usually (but not necessarily) has the extension .json"
-					default="images/walks/walks.json"
-					required="true">
 				</field>
 			</fieldset>
 		</fields>
