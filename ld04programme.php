@@ -65,8 +65,8 @@ class PlgContentLD04programme extends CMSPlugin implements SubscriberInterface {
 		}
 		else
 		{
-			error_reporting(E_ALL);
-			ini_set('display_errors', 1);
+//			error_reporting(E_ALL);
+//			ini_set('display_errors', 1);
 			$doc = Factory::getDocument();
 			$wa  = $doc->getWebAssetManager(); //new way to insert css (and scripts)
 			$pluginPath = 'plugins/content/' . $this->_name; // base path of this plugin's files
