@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>ramblers@yasur.uk</authorEmail>
 	<authorUrl>ramblers.org.uk</authorUrl>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<description>Plugin to display Lancaster Group programme</description>
 	<files>
 		<filename plugin="ld04programme">ld04programme.php</filename>
